@@ -29,8 +29,8 @@ function switchMapType(map, platform){
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: '{YOUR_APP_ID}',
-  app_code: '{YOUR_APP_CODE}',
+  app_id: 'devportal-demo-20180625',
+  app_code: '9v2BkviRwi9Ot26kp2IysQ',
   useCIT: true,
   useHTTPS: true
 });
