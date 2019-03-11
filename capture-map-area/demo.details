@@ -1,6 +1,6 @@
 ---
- name: Take a Snapshot of the Map
- description: Capture an area on the map
+ name: Marker on the Map
+ description: Display a map highlighting points of interest
  normalize_css: no
  dtd: html 5
  wrap: d
