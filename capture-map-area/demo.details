@@ -2,7 +2,7 @@
  name: Take a Snapshot of the Map
  description: Capture an area on the map
  resources:
-   - master/test-credentials.js
+   - greenred123/maps-api-for-javascript-examples/tree/master/capture-map-area/test-credentials.js
  normalize_css: no
  dtd: html 5
  wrap: d
