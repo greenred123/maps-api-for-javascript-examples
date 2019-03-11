@@ -24,9 +24,6 @@ function addMarkersToMap(map) {
   }
   
   
-  
-  
-  
   /**
    * Boilerplate map initialization code starts below:
    */
@@ -58,4 +55,6 @@ function addMarkersToMap(map) {
   var ui = H.ui.UI.createDefault(map, defaultLayers);
   
   // Now use the map as required...
-  addMarkersToMap(map);
+  window.onload = function () {
+    addMarkersToMap(map);
+  }
