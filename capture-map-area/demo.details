@@ -1,6 +1,8 @@
 ---
  name: Marker on the Map
  description: Display a map highlighting points of interest
+ resources:
+   - ../test-credentials.js
  normalize_css: no
  dtd: html 5
  wrap: d
