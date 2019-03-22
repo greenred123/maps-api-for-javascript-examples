@@ -79,14 +79,13 @@ window.addEventListener("load", function() {
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, location.origin);
         //changing page in gitbook doesn't do a full page load, so an extra event is needed
         setInterval(function(){ informParentOnChanges(contentIFrame, iFrameToc); }, 500);
-        if (ff_horizontal_flicker_fix) {
-            try {
-                var observer = new MutationObserver(function () {
-                    informParentOnChanges(contentIFrame, iFrameToc);
-                });
-                observer.observe(document.body, {attributes: true, childList: true, subtree: true});
-            } catch (e) {
-            }
+
+        try {
+            var observer = new MutationObserver(function () {
+                informParentOnChanges(contentIFrame, iFrameToc);
+            });
+            observer.observe(document.body, {attributes: true, childList: true, subtree: true});
+        } catch (e) {
         }
     }
 });
