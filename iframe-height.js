@@ -69,6 +69,7 @@ function informParentOnChanges(contentIFrame, iFrameToc){
 };
 
 window.addEventListener("load", function() {
+    console.log("does it log?");
 
     //only post message for the top level iframe
     if (top === parent){
