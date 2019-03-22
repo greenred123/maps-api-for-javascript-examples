@@ -56,7 +56,7 @@ function getHeight(contentIFrame, iFrameToc){
 
 function informParentOnChanges(contentIFrame, iFrameToc){
     var newIFrameHeight = getHeight(contentIFrame, iFrameToc);
-    if (ff_docs_iframe_height_fix && contentPath !== location.pathname) {
+    if (contentPath !== location.pathname) {
         contentIFrame = getContentIframe();
         iFrameToc = getIframeToc();
         newIFrameHeight = getTocHeight(iFrameToc);
