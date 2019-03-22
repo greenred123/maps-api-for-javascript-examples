@@ -51,6 +51,10 @@ function getTocHeight(toc){
 };
 
 function getHeight(contentIFrame, iFrameToc){
+    console.log("content iframe");
+    console.log(contentIFrame);
+    console.log("iframe toc");
+    console.log(iFrameToc);
     return Math.max(documentHeight(document), getIframeHeight(contentIFrame), getTocHeight(iFrameToc)) + framePadding;
 };
 
