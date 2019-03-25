@@ -20,7 +20,7 @@ function documentHeight(documentObj) {
         documentObj.documentElement.scrollHeight,
         documentObj.body.offsetHeight,
         documentObj.documentElement.offsetHeight
-    )+ framePadding;
+    );
 }
 
 function informParentOnChanges(){
@@ -34,7 +34,7 @@ function informParentOnChanges(){
 window.addEventListener("load", function() {
     //only post message for the top level iframe
     if (top === parent){
-        iFrameHeight = documentHeight(document);
+        iFrameHeight = documentHeight(document) + framePadding;
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://localhost.developer.here.com");
 
         setInterval(function(){ informParentOnChanges(); }, 500);
@@ -49,9 +49,3 @@ window.addEventListener("load", function() {
     }
 });
 
-window.addEventListener("unload", function() {
-    //only post message for the specific content iframe inside our iframe
-    if ((self.name === '')) {
-        top.postMessage({type: "unload"}, "https://localhost.developer.here.com");
-    }
-});
