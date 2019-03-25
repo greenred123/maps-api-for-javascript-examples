@@ -44,7 +44,7 @@ window.addEventListener("load", function() {
         console.log("origin");
         console.log(window.parent.location.origin);
         console.log(location.origin);
-        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, parent.location.origin);
+        //parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, location.origin);
 
         setInterval(function(){ informParentOnChanges(); }, 500);
 
