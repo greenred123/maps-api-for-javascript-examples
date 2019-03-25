@@ -26,7 +26,7 @@ function informParentOnChanges(){
     var newIFrameHeight = documentHeight(document);
     if (newIFrameHeight !== iFrameHeight) {
         iFrameHeight = newIFrameHeight;
-        window.parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, location.origin);
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, location.origin);
     }
 };
 
@@ -34,13 +34,15 @@ window.addEventListener("load", function() {
     console.log("does it log?");
 
     //only post message for the top level iframe
-    if (window.top === window.parent){
+    if (top === parent){
         iFrameHeight = documentHeight(document);
         console.log("parent");
-        console.log(window.parent);
+        console.log(parent);
         console.log("top");
-        console.log(window.top);
-        window.parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, location.origin);
+        console.log(top);
+        console.log("origin");
+        console.log(location.origin);
+        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, location.origin);
 
         setInterval(function(){ informParentOnChanges(); }, 500);
 
@@ -57,6 +59,6 @@ window.addEventListener("load", function() {
 window.addEventListener("unload", function() {
     //only post message for the specific content iframe inside our iframe
     if ((self.name === '')) {
-        window.top.postMessage({type: "unload"}, location.origin);
+        top.postMessage({type: "unload"}, location.origin);
     }
 });
