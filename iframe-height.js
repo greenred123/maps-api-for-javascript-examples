@@ -38,6 +38,8 @@ window.addEventListener("load", function() {
     if (top === parent){
         iFrameHeight = documentHeight(document);
         contentPath = location.pathname;
+        console.log("parent");
+        console.log(parent);
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, location.origin);
 
         setInterval(function(){ informParentOnChanges(); }, 500);
