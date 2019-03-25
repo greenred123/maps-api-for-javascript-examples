@@ -27,7 +27,7 @@ function informParentOnChanges(){
     var newIFrameHeight = documentHeight(document);
     if (newIFrameHeight !== iFrameHeight) {
         iFrameHeight = newIFrameHeight;
-        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, location.origin);
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://localhost.developer.here.com");
     }
 };
 
@@ -53,6 +53,6 @@ window.addEventListener("load", function() {
 window.addEventListener("unload", function() {
     //only post message for the specific content iframe inside our iframe
     if ((self.name === '')) {
-        top.postMessage({type: "unload"}, location.origin);
+        top.postMessage({type: "unload"}, "https://localhost.developer.here.com");
     }
 });
