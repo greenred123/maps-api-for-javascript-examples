@@ -10,7 +10,7 @@
 
 
 var iFrameHeight = 0,
-    framePadding = 5, 
+    framePadding = 5,
     iFrame;
 
 function documentHeight(documentObj) {
@@ -33,7 +33,6 @@ function informParentOnChanges(){
 
 window.addEventListener("load", function() {
     console.log("does it log?");
-    iFrame
     //only post message for the top level iframe
     if (top === parent){
         iFrameHeight = documentHeight(document);
@@ -43,7 +42,7 @@ window.addEventListener("load", function() {
         console.log("top");
         console.log(top);
         console.log("origin");
-        console.log(parent.location.origin);
+        console.log(window.parent.location.origin);
         console.log(location.origin);
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, parent.location.origin);
 
