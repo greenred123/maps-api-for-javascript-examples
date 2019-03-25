@@ -36,14 +36,8 @@ window.addEventListener("load", function() {
     //only post message for the top level iframe
     if (top === parent){
         iFrameHeight = documentHeight(document);
-        
-        console.log("parent");
-        console.log(parent);
-        console.log("top");
-        console.log(top);
-        console.log("origin");
-        console.log(window.parent.location);
-        console.log(location.origin);
+    
+        debugger;
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, location.origin);
 
         setInterval(function(){ informParentOnChanges(); }, 500);
