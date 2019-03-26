@@ -1,14 +1,3 @@
-/*
- * When a user opens an link inside the iframe in a new tab the url would look like this
- * https://developer.here.com/olp/documentation/data-client-library/content/dev_guide/index.html
- * as the htmls inside the iframe are loaded with /content/
- *
- * To not show the user the iframe content only without layout and menu
- * we need to redirect to the same url without /content/
- * which will then load the requested page inside an iframe
- */
-
-
 var iFrameHeight = 0,
     framePadding = 5,
     iFrame;
