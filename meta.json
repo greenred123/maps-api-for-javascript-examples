@@ -22,6 +22,12 @@
                             "title": "Take a Snapshot of the Map", 
                             "shortDescription": "Capture an area on the map",
                             "published": true
+                        },
+                        {
+                            "uid": "capture-map-area-1",
+                            "title": "Take a Snapshot of the Map", 
+                            "shortDescription": "Capture an area on the map",
+                            "published": false
                         }
 
                     ]
@@ -35,6 +41,12 @@
                             "title": "Marker on the Map", 
                             "shortDescription": "Display a map highlighting points of interest",
                             "published": true
+                        },
+                        {
+                            "uid": "markers-on-the-map-1",
+                            "title": "Marker on the Map", 
+                            "shortDescription": "Display a map highlighting points of interest",
+                            "published": false
                         }
                     ]
                 }
