@@ -9,7 +9,7 @@
  */
 
 
-var iFrameHeight = 0,
+var iFrameHeight = 500,
     framePadding = 5,
     iFrame;
 
