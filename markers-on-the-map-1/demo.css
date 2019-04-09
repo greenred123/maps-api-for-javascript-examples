@@ -1,1 +1,5 @@
-
+#markers-on-the-map #map {
+    width: 600px; 
+    height: 400px; 
+    background: grey;
+}
