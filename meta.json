@@ -25,7 +25,7 @@
                         },
                         {
                             "uid": "example-template",
-                            "title": "Take a Snapshot of the Map", 
+                            "title": "Example Template", 
                             "shortDescription": "Capture an area on the map",
                             "published": false
                         }
