@@ -19,7 +19,7 @@
                     "examples": [
                         {
                             "uid": "capture-map-area",
-                            "title": "Take a Snapshot of the Map", 
+                            "title": "Take a Snapshot of the Maps", 
                             "shortDescription": "Capture an area on the map",
                             "published": true
                         },
