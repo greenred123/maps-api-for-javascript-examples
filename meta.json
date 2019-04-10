@@ -24,7 +24,7 @@
                             "published": true
                         },
                         {
-                            "uid": "capture-map-area-1",
+                            "uid": "example-template",
                             "title": "Take a Snapshot of the Map", 
                             "shortDescription": "Capture an area on the map",
                             "published": false
