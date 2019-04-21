@@ -28,7 +28,13 @@
                             "title": "Synchronising Two Maps", 
                             "shortDescription": "This example shows two maps. The upper map allows for moving and zooming. The lower map observes the upper map's zoom level and position and adopts these values every time the upper map changes.",
                             "published": true
-                        },                        
+                        },    
+                        {
+                            "uid": "display-kml-on-map",
+                            "title": "Display KML Data", 
+                            "shortDescription": "Parse a KML file and display the data on a map.",
+                            "published": true
+                        },                                               
                         {
                             "uid": "example-template",
                             "title": "Example Template", 
