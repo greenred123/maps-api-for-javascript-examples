@@ -16,7 +16,13 @@ function informParentOnChanges(){
     var newIFrameHeight = documentHeight(document);
     if (newIFrameHeight !== iFrameHeight) {
         iFrameHeight = newIFrameHeight;
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://localhost.developer.here.com");
         parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://dv.developer.here.com");
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://dt.developer.here.com");
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://st.developer.here.com");
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://ci.developer.here.com");        
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://pr.developer.here.com");
+        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://developer.here.com");
     }
 };
 
@@ -24,7 +30,13 @@ window.addEventListener("load", function() {
     //only post message for the top level iframe
     if (top === parent){
         iFrameHeight = documentHeight(document) + framePadding;
+        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://localhost.developer.here.com");
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://dv.developer.here.com");
+        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://dt.developer.here.com");
+        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://st.developer.here.com");
+        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://ci.developer.here.com");        
+        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://pr.developer.here.com");
+        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://developer.here.com");
 
         setInterval(function(){ informParentOnChanges(); }, 500);
 
