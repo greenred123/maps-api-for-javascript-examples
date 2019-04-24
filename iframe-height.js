@@ -21,7 +21,6 @@ function informParentOnChanges(){
         parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://dt.developer.here.com");
         parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://st.developer.here.com");
         parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://ci.developer.here.com");        
-        parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://pr.developer.here.com");
         parent.postMessage({type: "iFrameHeightChanged", height: iFrameHeight}, "https://developer.here.com");
     }
 };
@@ -35,7 +34,6 @@ window.addEventListener("load", function() {
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://dt.developer.here.com");
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://st.developer.here.com");
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://ci.developer.here.com");        
-        parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://pr.developer.here.com");
         parent.postMessage({type: "DOMContentLoaded", height: iFrameHeight}, "https://developer.here.com");
 
         setInterval(function(){ informParentOnChanges(); }, 500);
