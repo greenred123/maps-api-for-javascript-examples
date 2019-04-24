@@ -24,6 +24,24 @@
                             "published": true
                         },
                         {
+                            "uid": "synchronising-two-maps",
+                            "title": "Synchronising Two Maps", 
+                            "shortDescription": "This example shows two maps. The upper map allows for moving and zooming. The lower map observes the upper map's zoom level and position and adopts these values every time the upper map changes.",
+                            "published": true
+                        },    
+                        {
+                            "uid": "display-kml-on-map",
+                            "title": "Display KML Data", 
+                            "shortDescription": "Parse a KML file and display the data on a map.",
+                            "published": true
+                        },  
+                        {
+                            "uid": "custom-tile-overlay",
+                            "title": "Adding an Overlay to the Map", 
+                            "shortDescription": "This example displays a movable map initially centered on the historical centre of <b>Berlin</b> (<i>52.515, °N, 13.405°E</i>) with an overlay of a historical map from 1789 on top of the base map. A public domain image was used as a source, and split it into individual map tiles. Additional tiles are only downloaded when the zoom level or location changes.",
+                            "published": true
+                        },                                                                                            
+                        {
                             "uid": "example-template",
                             "title": "Example Template", 
                             "shortDescription": "Capture an area on the map",
