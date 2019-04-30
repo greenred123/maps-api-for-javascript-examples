@@ -33,6 +33,7 @@
                             "uid": "display-kml-on-map",
                             "title": "Display KML Data", 
                             "shortDescription": "Parse a KML file and display the data on a map.",
+                            "published": false
                         },  
                         {
                             "uid": "custom-tile-overlay",
