@@ -7,16 +7,3 @@
     display: inline-block;
 }
 
-.btn-group {
-    position: absolute;
-    top: 7.2rem;
-    left: 0px;
-    background-color: #fff;
-    padding: 10px;
-}
-
-@media (max-width: 1024px ) {
-    .btn-group {
-        top: 8.6rem;
-    }
-}
