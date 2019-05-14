@@ -1,6 +1,11 @@
 
-#markers-on-the-map #map {
-    /* width: 600px; 
-    height: 400px;  */
+#map {
+    width:95%;
+    height:450px;
     background: grey;
+}
+
+#panel {
+    width:100%;
+    height:400px;
 }
