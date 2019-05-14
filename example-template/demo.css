@@ -1,10 +1,10 @@
 /* styles for rendering on js fiddle */
 #map {
-    width: 600px;
-    height: 300px;
+    /* width: 600px;
+    height: 300px; */
     background: grey;
 }
 
 #panel {
-    width: 600px;
+    /* width: 600px; */
 }

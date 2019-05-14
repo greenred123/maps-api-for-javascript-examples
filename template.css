@@ -236,13 +236,15 @@ a.highlight-link span{
 }
 #map{
     width:100%;
-    height:400px;
+    height:100%;
     border:1px solid #cdced0;
     background-color:#e4e6e9
 }
 #panel{
-    min-height:400px;
-    max-height:400px;
+    /* min-height:400px;
+    max-height:400px; */
+    width:100%;
+    height:100%;
     overflow:auto;
     background:inherit
 }
