@@ -18,6 +18,12 @@
                     "title": "Maps",
                     "examples": [
                         {
+                            "uid": "map-at-specified-location",
+                            "title": "Map at a specified location", 
+                            "shortDescription": "Display a map at a specified location and zoom level",
+                            "published": true
+                        },
+                        {
                             "uid": "capture-map-area",
                             "title": "Take a Snapshot of the Map", 
                             "shortDescription": "Capture an area on the map",
