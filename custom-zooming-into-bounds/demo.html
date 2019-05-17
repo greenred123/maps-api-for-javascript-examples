@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="description" content="Display a map highlighting points of interest">
-    <title>Map at a specified location</title>
+    <title>Zoom into Bounds</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
     <link rel="stylesheet" type="text/css" href="demo.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -17,9 +17,14 @@
     <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
   </head>
   <body id="markers-on-the-map">
-    <h1>Map at a specified location</h1>
-    <p>This example displays a movable map initially centered on the <b>Brandenburg Gate</b> in the centre of Berlin <i>(52.5159°N, 13.3777°E)</i></p>
+    <h1>Zoom into Bounds</h1>
+    <p>This example displays circles on the map, which denote cities' population. By clicking on each circle you can zoom into it, 
+      but with different maximum zoom levels, depending on the circle size.</p>
     <div id="map"></div>
+    <h3>Code</h3>
+    <p>Instead of using <code>setViewBounds</code> method to zoom into circle's bounds, we are using 
+      <code>getCameraDataForBounds</code> to compute the best zoom level and map centre for the bounds 
+      and then perform a custom processing on it to limit maximum zoom level.</p>
     <script type="text/javascript" src='demo.js'></script>
   </body>
 </html>

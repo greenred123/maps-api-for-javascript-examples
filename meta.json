@@ -24,6 +24,42 @@
                             "published": true
                         },
                         {
+                            "uid": "map-using-view-bounds",
+                            "title": "Map using View Bounds", 
+                            "shortDescription": "Display a map of a given area",
+                            "published": true
+                        },
+                        {
+                            "uid": "map-multi-language-support",
+                            "title": "Multi-language support", 
+                            "shortDescription": "Display a map with labels in a foreign language",
+                            "published": true
+                        },
+                        {
+                            "uid": "map-scale-bar-changing-from-the-metric-system",
+                            "title": "Changing from the Metric System", 
+                            "shortDescription": "Display a map including a scale bar in miles or yards",
+                            "published": true
+                        },
+                        {
+                            "uid": "panning-the-map",
+                            "title": "Panning the Map", 
+                            "shortDescription": "Programmatically pan the map so that it is continually in motion",
+                            "published": true
+                        },
+                        {
+                            "uid": "restrict-map",
+                            "title": "Restrict Map Movement", 
+                            "shortDescription": "Restrict a moveable map to a given rectangular area",
+                            "published": true
+                        },
+                        {
+                            "uid": "custom-zooming-into-bounds",
+                            "title": "Zoom into Bounds", 
+                            "shortDescription": "Zoom into bounds limiting maximum level",
+                            "published": true
+                        },
+                        {
                             "uid": "capture-map-area",
                             "title": "Take a Snapshot of the Map", 
                             "shortDescription": "Capture an area on the map",
