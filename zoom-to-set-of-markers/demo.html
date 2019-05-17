@@ -3,8 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    
-    <title>Restrict Map Movement</title>
+    <title>Zooming to a Set of Markers</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
     <link rel="stylesheet" type="text/css" href="demo.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -17,13 +16,14 @@
     <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
   </head>
   <body id="markers-on-the-map">
-    <h1>Restrict Map Movement</h1>
-    <p>This example displays a moveable map of <b>Alcatraz Island</b>. Even though the map can still be panned and zoomed, 
-      the center of the map cannot be moved outside of the marked area</p>
+    <h1>Zooming to a Set of Markers</h1>
+    <p>This examples adds three markers showing the locations of 
+      <b>Boston</b>, <b>Washington</b> and <b>Toronto</b> to the map and alters the map display to ensure that all of the markers are visible.</p>
     <div id="map"></div>
     <h3>Code</h3>
-    <p>The <code>H.map.ViewModel</code> represents the position of the map. The <code>sync</code> event is fired whenever 
-      the rendered map is synchronized with the view-model data. By listening to the sync event the value of the <code>map.center</code> can be restricted to a certain range.</p>
+    <p>An <code>H.map.Group</code> is used to associate the markers together and the <code>group.getBounds()</code>
+      method to find the minimal bounding box holding all of the group's contents. 
+      The <code>map.viewBounds()</code> can then be updated.</p>
     <script type="text/javascript" src='demo.js'></script>
   </body>
 </html>

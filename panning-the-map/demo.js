@@ -41,8 +41,8 @@ function panTheMap(map) {
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: 'devportal-demo-20180625',
-  app_code: '9v2BkviRwi9Ot26kp2IysQ',
+  app_id: window.app_id,
+  app_code: window.app_code,
   useHTTPS: true
 });
 var pixelRatio = window.devicePixelRatio || 1;

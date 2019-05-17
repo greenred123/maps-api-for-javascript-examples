@@ -1,19 +1,23 @@
 /**
- * Alters the UI to use imperial measurements.
+ * Adds three markers and alters the view bounds of the map to ensure that all
+ * markers are visible
  *
  * @param  {H.Map} map      A HERE Map instance within the application
- * @param  {Object.<string, H.service.MapType>} defaultLayers
- *         an object holding the three default HERE Map types
  */
-function useImperialMeasurements(map, defaultLayers){
-  // Create the default UI components
-  var ui = H.ui.UI.createDefault(map, defaultLayers);
+function addMarkersAndSetViewBounds() {
+  // create map objects
+  var toronto = new H.map.Marker({lat:43.7,  lng:-79.4}),
+      boston = new H.map.Marker({lat:42.35805, lng:-71.0636}),
+      washington = new H.map.Marker({lat:38.8951, lng:-77.0366}),
+      group = new H.map.Group();
 
-  // Set the UI unit system to imperial measurement
-  ui.setUnitSystem(H.ui.UnitSystem.IMPERIAL);
+  // add markers to the group
+  group.addObjects([toronto, boston, washington]);
+  map.addObject(group);
+
+  // get geo bounding box for the group and set it to the map
+  map.setViewBounds(group.getBounds());
 }
-
-
 
 
 
@@ -33,11 +37,12 @@ var defaultLayers = platform.createDefaultLayers({
   ppi: pixelRatio === 1 ? undefined : 320
 });
 
-//Step 2: initialize a map - this map is centered over Boston.
+//Step 2: initialize a map - this map is centered over Europe
+// note that all the markers are in North America...
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.normal.map,{
-  center: {lat:42.3572, lng:-71.0596},
-  zoom: 14,
+  center: {lat:52, lng:5},
+  zoom: 5,
   pixelRatio: pixelRatio
 });
 
@@ -47,4 +52,4 @@ var map = new H.Map(document.getElementById('map'),
 var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
 // Now use the map as required...
-useImperialMeasurements(map, defaultLayers);
+addMarkersAndSetViewBounds(map);
