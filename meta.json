@@ -101,6 +101,18 @@
                             "title": "Marker on the Map", 
                             "shortDescription": "Display a map highlighting points of interest",
                             "published": true
+                        },
+                        {
+                            "uid": "map-with-dom-marker",
+                            "title": "DOM Marker", 
+                            "shortDescription": "Display a marker that is capable of receiving DOM events",
+                            "published": true
+                        },
+                        {
+                            "uid": "map-with-svg-graphic-markers",
+                            "title": "SVG Graphic Markers", 
+                            "shortDescription": "Display a map with custom SVG markers",
+                            "published": true
                         }
                     ]
                 }

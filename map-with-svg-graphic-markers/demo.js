@@ -1,31 +1,30 @@
 /**
- * Switches the map language to simplified Chinese
+ * Adds two SVG markers over the homes of the Chicago Bears and Chicago Cubs
  *
  * @param  {H.Map} map      A HERE Map instance within the application
- * @pama   {H.service.Platform} platform    A stub class to access HERE services
  */
-function switchMapLanguage(map, platform){
-  var mapTileService = platform.getMapTileService({
-      type: 'base'
-    }),
-    // Our layer will load tiles from the HERE Map Tile API
-    chineseMapLayer = mapTileService.createTileLayer(
-      'maptile',
-      'normal.day',
-      pixelRatio === 1 ? 256 : 512,
-      'png8',
-      {lg: 'CHI', ppi: pixelRatio === 1 ? undefined : 320}
-    );
-  map.setBaseLayer(chineseMapLayer);
+function addSVGMarkers(map){
+  //Create the svg mark-up
+  var svgMarkup = '<svg  width="24" height="24" xmlns="http://www.w3.org/2000/svg">' +
+  '<rect stroke="black" fill="${FILL}" x="1" y="1" width="22" height="22" />' +
+  '<text x="12" y="18" font-size="12pt" font-family="Arial" font-weight="bold" ' +
+  'text-anchor="middle" fill="${STROKE}" >C</text></svg>';
 
-  // Display default UI components on the map and change default
-  // language to simplified Chinese.
-  // Besides supported language codes you can also specify your custom translation
-  // using H.ui.i18n.Localization.
-  var ui = H.ui.UI.createDefault(map, defaultLayers, 'zh-CN');
+  // Add the first marker
+  var bearsIcon = new H.map.Icon(
+    svgMarkup.replace('${FILL}', 'blue').replace('${STROKE}', 'red')),
+    bearsMarker = new H.map.Marker({lat: 41.8625, lng: -87.6166 },
+      {icon: bearsIcon});
 
-  // Remove not needed settings control
-  ui.removeControl('mapsettings');
+  map.addObject(bearsMarker);
+
+  // Add the second marker.
+  var cubsIcon = new H.map.Icon(
+    svgMarkup.replace('${FILL}', 'white').replace('${STROKE}', 'orange')),
+    cubsMarker = new H.map.Marker({lat: 41.9483, lng: -87.6555 },
+      {icon: cubsIcon});
+
+  map.addObject(cubsMarker);
 }
   
   
@@ -61,5 +60,5 @@ function switchMapLanguage(map, platform){
   
   // Now use the map as required...
   window.onload = function () {
-    switchMapLanguage(map);
+    addSVGMarkers(map);
   }
