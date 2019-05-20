@@ -193,6 +193,24 @@
                             "published": true
                         }
                     ]
+                },
+                {
+                    "uid": "events",
+                    "title": "Events",
+                    "examples": [
+                        {
+                            "uid": "map-object-events-displayed",
+                            "title": "Map Objects Events", 
+                            "shortDescription": "Handle events on various map objects",
+                            "published": true
+                        },
+                        {
+                            "uid": "map-objects-event-delegation",
+                            "title": "Map Objects Event Delegation", 
+                            "shortDescription": "Use event delegation on map objects",
+                            "published": true
+                        }
+                    ]
                 }
             ]
             
