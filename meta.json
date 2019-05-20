@@ -175,6 +175,24 @@
                             "published": true
                         }
                     ]
+                },
+                {
+                    "uid": "clustering",
+                    "title": "Clustering",
+                    "examples": [
+                        {
+                            "uid": "marker-clustering",
+                            "title": "Marker Clustering", 
+                            "shortDescription": "Cluster multiple markers together to better visualize the data",
+                            "published": true
+                        },
+                        {
+                            "uid": "custom-cluster-theme",
+                            "title": "Marker Clustering with Custom Theme", 
+                            "shortDescription": "Cluster multiple markers and customize the theme",
+                            "published": true
+                        }
+                    ]
                 }
             ]
             
