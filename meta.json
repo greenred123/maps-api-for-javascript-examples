@@ -139,6 +139,42 @@
                             "published": true
                         }
                     ]
+                },
+                {
+                    "uid": "geoshapes",
+                    "title": "Geoshapes",
+                    "examples": [
+                        {
+                            "uid": "polyline-on-the-map",
+                            "title": "Polyline on the Map", 
+                            "shortDescription": "Display a map with a line showing a known route",
+                            "published": true
+                        },
+                        {
+                            "uid": "polygon-on-the-map",
+                            "title": "Polygon on the Map", 
+                            "shortDescription": "Display a map highlighting a region or area",
+                            "published": true
+                        },
+                        {
+                            "uid": "polygon-with-holes-on-the-map",
+                            "title": "Polygon with Holes on the Map", 
+                            "shortDescription": "Display a map highlighting a region or area",
+                            "published": true
+                        },
+                        {
+                            "uid": "circle-on-the-map",
+                            "title": "Circle on the Map", 
+                            "shortDescription": "Display a map highlighting a circular region",
+                            "published": true
+                        },
+                        {
+                            "uid": "rectangle-on-the-map",
+                            "title": "Rectangle on the map", 
+                            "shortDescription": "Display a map highlighting a retangular region or area",
+                            "published": true
+                        }
+                    ]
                 }
             ]
             
