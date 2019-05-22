@@ -229,6 +229,54 @@
                             "published": true
                         }
                     ]
+                },
+                {
+                    "uid": "services",
+                    "title": "Services - Routing, Geocoding",
+                    "examples": [
+                        {
+                            "uid": "map-with-route-from-a-to-b",
+                            "title": "Map with Driving Route from A to B", 
+                            "shortDescription": "Request a driving route from A to B and display it on the map",
+                            "published": true
+                        },
+                        {
+                            "uid": "map-with-pedestrian-route-from-a-to-b",
+                            "title": "Map with Pedestrian Route from A to B", 
+                            "shortDescription": "Request a walking route from A to B and display it on the map",
+                            "published": true
+                        },
+                        {
+                            "uid": "map-with-route-from-a-to-b-using-public-transport",
+                            "title": "Map with Route from A to B using Public Transport", 
+                            "shortDescription": "Request a route from A to B using public transport and display it on the map",
+                            "published": true
+                        },
+                        {
+                            "uid": "geocode-a-location-from-address",
+                            "title": "Search for a Location based on an Address", 
+                            "shortDescription": "Request a location using a free-form text input and display it on the map",
+                            "published": true
+                        },
+                        {
+                            "uid": "geocode-a-location-from-structured-address",
+                            "title": "Search for a Location given a Structured Address", 
+                            "shortDescription": "Request a location from a structured address and display it on the map",
+                            "published": true
+                        },
+                        {
+                            "uid": "reverse-geocode-an-address-from-location",
+                            "title": "Search for the Address of a Known Location", 
+                            "shortDescription": "Request address details for a given location and display it on the map",
+                            "published": true
+                        },
+                        {
+                            "uid": "search-for-landmark",
+                            "title": "Search for a Landmark", 
+                            "shortDescription": "Request the location of a landmark and display it on the map",
+                            "published": true
+                        }
+                    ]
                 }
             ]
             
