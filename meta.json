@@ -277,6 +277,24 @@
                             "published": true
                         }
                     ]
+                },
+                {
+                    "uid": "fleet-telematics",
+                    "title": "Integration of Fleet Telematics Services",
+                    "examples": [
+                        {
+                            "uid": "search-match-fts",
+                            "title": "Data Matching with the Advanced Datasets", 
+                            "shortDescription": "Match routing result with the Advanced Datasets data",
+                            "published": true
+                        },
+                        {
+                            "uid": "postcodes-jsla-fts",
+                            "title": "Map with postcodes from the Advanced Data Sets", 
+                            "shortDescription": "Display a map with the Advanced Data Sets postcode boundaries overlay",
+                            "published": true
+                        }
+                    ]
                 }
             ]
             
