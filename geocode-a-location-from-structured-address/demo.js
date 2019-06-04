@@ -47,7 +47,7 @@ function onSuccess(result) {
  * @param  {Object} error  The error message received.
  */
 function onError(error) {
-  alert('Ooops!');
+  alert('Can\'t reach the remote server');
 }
 
 
