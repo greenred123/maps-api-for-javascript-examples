@@ -38,6 +38,8 @@ var defaultLayers = platform.createDefaultLayers();
 var map = new H.Map(document.getElementById('map'), defaultLayers.normal.map, {
   zoom: 1
 });
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 // Step 3: make the map interactive
 // MapEvents enables the event system

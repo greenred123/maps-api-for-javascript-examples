@@ -60,6 +60,8 @@ var map = new H.Map(document.getElementById('map'),
   zoom: 16,
   pixelRatio: pixelRatio
 });
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 map.setBaseLayer(defaultLayers.satellite.map);
 

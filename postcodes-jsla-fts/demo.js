@@ -64,6 +64,8 @@ var defaultLayers = platform.createDefaultLayers({
 //Step 2: initialize a map  - not specificing a location will give a whole world view.
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.normal.map, {pixelRatio: pixelRatio});
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 map.setCenter({lat:52.5159, lng:13.3777});
 map.setZoom(13);

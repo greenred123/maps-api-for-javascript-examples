@@ -60,6 +60,8 @@ var defaultLayers = platform.createDefaultLayers({
 //Step 2: initialize a map  - not specificing a location will give a whole world view.
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.normal.map, {pixelRatio: pixelRatio});
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 //Step 3: make the map interactive
 // MapEvents enables the event system

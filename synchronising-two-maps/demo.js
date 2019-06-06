@@ -52,6 +52,8 @@ var map = new H.Map(mapContainer,
   center: {lat: 53.430, lng: -2.961},
   zoom: 7
 });
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 // initialize a map that will be synchronised
 var staticMap = new H.Map(staticMapContainer,

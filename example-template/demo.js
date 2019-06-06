@@ -46,6 +46,8 @@ var map = new H.Map(mapContainer, defaultLayers.normal.map, {
   // Champs-Elysees
   center: {lat: 48.869145, lng: 2.314298}
 });
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 // Step 3: make the map interactive
 // MapEvents enables the event system

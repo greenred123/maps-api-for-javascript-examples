@@ -64,6 +64,8 @@ var map = new H.Map(document.getElementById('map'), defaultLayers.normal.map, {
   center: new H.geo.Point(52.515, 13.405),
   zoom: 14
 });
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 // Step 3: make the map interactive
 // mapEvents enables the event system

@@ -48,6 +48,8 @@ var map = new H.Map(document.getElementById('map'),
   zoom: 10,
   pixelRatio: pixelRatio
 });
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
 
 
 // MapEvents enables the event system

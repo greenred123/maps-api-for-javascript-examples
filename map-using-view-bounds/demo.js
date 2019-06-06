@@ -30,6 +30,8 @@ function setMapViewBounds(map){
     center: {lat:50, lng:5},
     zoom: 4
   });
+  // add a resize listener to make sure that the map occupies the whole container
+  window.addEventListener('resize', () => map.getViewPort().resize());
   
   //Step 3: make the map interactive
   // MapEvents enables the event system
