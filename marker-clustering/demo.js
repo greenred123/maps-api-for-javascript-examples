@@ -1,4 +1,4 @@
-   /**
+/**
  * Display clustered markers on a map
  *
  * Note that the maps clustering module http://js.api.here.com/v3/3.0/mapsjs-clustering.js
@@ -6,7 +6,7 @@
 
  * @param {H.Map} map A HERE Map instance within the application
  * @param {Array.<Object>} data Raw data that contains airports' coordinates
- */
+*/
 function startClustering(map, data) {
   // First we need to create an array of DataPoint objects,
   // for the ClusterProvider
