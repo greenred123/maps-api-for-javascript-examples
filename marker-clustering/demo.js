@@ -5,7 +5,7 @@
  * must be loaded to use the Clustering
 
  * @param {H.Map} map A HERE Map instance within the application
- * @param {Array.<Object>} data Raw data that contains airports' coordinates
+ * @param {Object[]} data Raw data that contains airports' coordinates
 */
 function startClustering(map, data) {
   // First we need to create an array of DataPoint objects,

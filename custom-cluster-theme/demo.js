@@ -7,7 +7,7 @@
  * @param {H.Map} map A HERE Map instance within the application
  * @param {H.ui.UI} ui Default ui component
  * @param {Function} getBubbleContent Function returning detailed information about photo
- * @param {Array.<Object>} data Raw data containing information about each photo
+ * @param {Object[]} data Raw data containing information about each photo
  */
 function startClustering(map, ui, getBubbleContent, data) {
   // First we need to create an array of DataPoint objects for the ClusterProvider
