@@ -1,11 +1,10 @@
-
-#map {
+#geocode #map {
     width: 45%;
     height: 450px;
     background: grey;
 }
 
-#panel {
+#geocode #panel {
     width: 45%;
     height: 400px;
 }
