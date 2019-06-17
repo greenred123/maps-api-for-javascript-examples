@@ -5,6 +5,9 @@
 .table td{
     vertical-align:middle !important
 }
+.page-header{
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
 .page-header div.thumbnail{
     display:none
 }
