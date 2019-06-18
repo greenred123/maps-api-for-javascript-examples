@@ -20,10 +20,12 @@
     #geocode #map {
         display: block;
         width: 95%;
+        margin-bottom: 3px;
     }
     
     #geocode #panel {
         display: block;
         width: 95%;
+        margin-bottom: 3px;
     }
 }
