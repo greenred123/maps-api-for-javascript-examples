@@ -1,6 +1,6 @@
 ---
- name: Data Matching with the Advanced Datasets
- description: Match routing result with the Advanced Datasets data
+ name: Data Matching with the Advanced Data Sets
+ description: Match routing result with the Advanced Data Sets data
  resources:
    - https://greenred123.github.io/maps-api-for-javascript-examples/test-credentials.js
  normalize_css: no

@@ -284,8 +284,8 @@
                     "examples": [
                         {
                             "uid": "search-match-fts",
-                            "title": "Data Matching with the Advanced Datasets", 
-                            "shortDescription": "Match routing result with the Advanced Datasets data",
+                            "title": "Data Matching with the Advanced Data Sets", 
+                            "shortDescription": "Match routing result with the Advanced Data Sets data",
                             "published": true
                         },
                         {
