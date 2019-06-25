@@ -30,7 +30,7 @@ All of the following examples use **version 3** of the API
 * [Map Objects Event Delegation](map-objects-event-delegation) - Use event delegation on map objects
 * [Map Objects Events](map-object-events-displayed) - Handle events on various map objects
 * [Map UI Components](moved-map-components) - Display a map with the standard UI components in an altered location
-* [Map at a specified location](map-at-specified-location) - Display a map at a specified location and zoom level
+* [Map at a specified location](map-at-specified-location/demo.html) - Display a map at a specified location and zoom level
 * [Map using View Bounds](map-using-view-bounds) - Display a map of a given area
 * [Map with Driving Route from A to B](map-with-route-from-a-to-b) - Request a driving route from A to B and display it on the map.
 * [Map with Pedestrian Route from A to B](map-with-pedestrian-route-from-a-to-b) - Request a walking route from A to B and display it on the map.
