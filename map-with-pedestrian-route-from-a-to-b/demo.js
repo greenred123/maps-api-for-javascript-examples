@@ -12,7 +12,7 @@ function calculateRouteFromAtoB (platform) {
     routeRequestParams = {
       mode: 'shortest;pedestrian',
       representation: 'display',
-      waypoint0: '51.5141,-0.0999', // St Paul's Cathedral
+      waypoint0: '51.51326,-0.0968752', // St Paul's Cathedral
       waypoint1: '51.5081,-0.0985',  // Tate Modern
       routeattributes: 'waypoints,summary,shape,legs',
       maneuverattributes: 'direction,action'
@@ -68,9 +68,7 @@ var mapContainer = document.getElementById('map'),
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: window.app_id,
-  app_code: window.app_code,
-  useHTTPS: true
+  apikey: window.apikey
 });
 var pixelRatio = window.devicePixelRatio || 1;
 var defaultLayers = platform.createDefaultLayers({
@@ -80,7 +78,7 @@ var defaultLayers = platform.createDefaultLayers({
 
 //Step 2: initialize a map - this map is centered over Berlin
 var map = new H.Map(mapContainer,
-  defaultLayers.normal.map,{
+  defaultLayers.vector.normal.map,{
   center: {lat:52.5160, lng:13.3779},
   zoom: 13,
   pixelRatio: pixelRatio
@@ -142,7 +140,9 @@ function addRouteShapeToMap(route){
   // Add the polyline to the map
   map.addObject(polyline);
   // And zoom to its bounding rectangle
-  map.setViewBounds(polyline.getBounds(), true);
+  map.getViewModel().setLookAtData({
+    bounds: polyline.getBoundingBox()
+  });
 }
 
 

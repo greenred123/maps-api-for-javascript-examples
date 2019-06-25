@@ -2,7 +2,7 @@
 
 This repository holds a series of JavaScript based examples using the **HERE Maps API for JavaScript**. More information about the API can be found on [developer.here.com](https://developer.here.com/javascript-apis/) under the JavaScript APIs section.
 
-> **Note:** In order to get the sample code to work, you **must** replace all instances of `{YOUR_APP_ID}` and `{YOUR_APP_CODE}` within the code and use your own **HERE** credentials.
+> **Note:** In order to get the sample code to work, you **must** replace all instances of `{YOUR_APIKEY}` within the code and use your own **HERE** credentials.
 
 > You can obtain a set of credentials from the [Plans Page](https://developer.here.com/plans) on developer.here.com.
 

@@ -33,7 +33,7 @@
                             "uid": "map-multi-language-support",
                             "title": "Multi-language support", 
                             "shortDescription": "Display a map with labels in a foreign language",
-                            "published": true
+                            "published": false
                         },
                         {
                             "uid": "map-scale-bar-changing-from-the-metric-system",
@@ -45,7 +45,7 @@
                             "uid": "panning-the-map",
                             "title": "Panning the Map", 
                             "shortDescription": "Programmatically pan the map so that it is continually in motion",
-                            "published": true
+                            "published": false
                         },
                         {
                             "uid": "restrict-map",
@@ -130,7 +130,7 @@
                             "uid": "ordering-overlapping-markers",
                             "title": "Ordering Overlapping Markers", 
                             "shortDescription": "Arrange the order in which a series of map objects are displayed",
-                            "published": true
+                            "published": false
                         },
                         {
                             "uid": "zoom-to-set-of-markers",

@@ -42,12 +42,10 @@ function setUpCustomZooming(map) {
     var target = evt.target;
     // retrieve maximum zoom level
     var maxZoom = target.getData().maxZoom;
-    // calculate best camera data to fit object's bounds
-    var cameraData = map.getCameraDataForBounds(target.getBounds());
-
-    // we set new zoom level taking into acount 'maxZoom' value
-    map.setZoom(Math.min(cameraData.zoom, maxZoom), true);
-    map.setCenter(cameraData.position, true);
+    // get the shape's bounding box and adjust the camera position
+    map.getViewModel().setLookAtData({
+      bounds: target.getBoundingBox()
+    });
   });
 
   // add objects to the map
@@ -61,9 +59,7 @@ function setUpCustomZooming(map) {
 
 // Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: window.app_id,
-  app_code: window.app_code,
-  useHTTPS: true
+  apikey: window.apikey
 });
 var pixelRatio = window.devicePixelRatio || 1;
 var defaultLayers = platform.createDefaultLayers({
@@ -72,7 +68,7 @@ var defaultLayers = platform.createDefaultLayers({
 });
 
 // Step 2: initialize a map
-var map = new H.Map(document.getElementById('map'), defaultLayers.normal.map, {
+var map = new H.Map(document.getElementById('map'), defaultLayers.vector.normal.map, {
   // initial center and zoom level of the map
   center: new H.geo.Point(41.4822, -81.6697),
   zoom: 4,

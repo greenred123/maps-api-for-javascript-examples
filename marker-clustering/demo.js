@@ -1,7 +1,7 @@
 /**
  * Display clustered markers on a map
  *
- * Note that the maps clustering module http://js.api.here.com/v3/3.0/mapsjs-clustering.js
+ * Note that the maps clustering module https://js.api.here.com/v3/3.1/mapsjs-clustering.js
  * must be loaded to use the Clustering
 
  * @param {H.Map} map A HERE Map instance within the application
@@ -39,9 +39,7 @@ function startClustering(map, data) {
 
 // Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: window.app_id,
-  app_code: window.app_code,
-  useHTTPS: true
+  apikey: window.apikey
 });
 var pixelRatio = window.devicePixelRatio || 1;
 var defaultLayers = platform.createDefaultLayers({
@@ -50,7 +48,7 @@ var defaultLayers = platform.createDefaultLayers({
 });
 
 // Step 2: initialize a map
-var map = new H.Map(document.getElementById('map'), defaultLayers.normal.map, {
+var map = new H.Map(document.getElementById('map'), defaultLayers.vector.normal.map, {
   center: new H.geo.Point(30.789, 33.790),
   zoom: 2,
   pixelRatio: pixelRatio

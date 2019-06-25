@@ -59,9 +59,7 @@ function onError(error) {
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: 'devportal-demo-20180625',
-  app_code: '9v2BkviRwi9Ot26kp2IysQ',
-  useHTTPS: true
+  apikey: apikey
 });
 var pixelRatio = window.devicePixelRatio || 1;
 var defaultLayers = platform.createDefaultLayers({
@@ -71,7 +69,7 @@ var defaultLayers = platform.createDefaultLayers({
 
 //Step 2: initialize a map - this map is centered over California
 var map = new H.Map(document.getElementById('map'),
-  defaultLayers.normal.map,{
+  defaultLayers.vector.normal.map,{
   center: {lat:37.376, lng:-122.034},
   zoom: 15,
   pixelRatio: pixelRatio
@@ -185,7 +183,9 @@ function addLocationsToMap(locations){
 
   // Add the locations group to the map
   map.addObject(group);
-  map.setViewBounds(group.getBounds());
+  map.getViewModel().setLookAtData({
+    bounds: group.getBoundingBox()
+  });
 }
 
 // Now use the map as required...

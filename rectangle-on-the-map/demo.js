@@ -24,9 +24,7 @@ function addRectangleToMap(map) {
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: window.app_id,
-  app_code: window.app_code,
-  useHTTPS: true
+  apikey: window.apikey
 });
 var pixelRatio = window.devicePixelRatio || 1;
 var defaultLayers = platform.createDefaultLayers({
@@ -36,7 +34,7 @@ var defaultLayers = platform.createDefaultLayers({
 
 //Step 2: initialize a map - this map is centered over Europe
 var map = new H.Map(document.getElementById('map'),
-  defaultLayers.normal.map,{
+  defaultLayers.vector.normal.map,{
   center: {lat: 53.1, lng: 13.1},
   zoom: 3,
   pixelRatio: pixelRatio

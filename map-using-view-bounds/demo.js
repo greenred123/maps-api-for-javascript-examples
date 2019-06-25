@@ -5,7 +5,9 @@
  */
 function setMapViewBounds(map){
   var bbox = new H.geo.Rect(42.3736,-71.0751,42.3472,-71.0408);
-  map.setViewBounds(bbox);
+  map.getViewModel().setLookAtData({
+    bounds: bbox
+  });
 }
   
   
@@ -14,19 +16,15 @@ function setMapViewBounds(map){
    */
   
   //Step 1: initialize communication with the platform
-  // In your own code, replace variable app_id with your own app_id
-  // and app_code with your own app_code
+  // In your own code, replace variable apikey with your own apikey
   var platform = new H.service.Platform({
-    app_id: app_id,
-    app_code: app_code,
-    useCIT: true,
-    useHTTPS: true
+    apikey: apikey
   });
   var defaultLayers = platform.createDefaultLayers();
   
   //Step 2: initialize a map - this map is centered over Europe
   var map = new H.Map(document.getElementById('map'),
-    defaultLayers.normal.map,{
+    defaultLayers.vector.normal.map,{
     center: {lat:50, lng:5},
     zoom: 4
   });

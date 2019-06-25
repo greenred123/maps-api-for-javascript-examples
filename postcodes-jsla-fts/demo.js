@@ -7,33 +7,33 @@
 function showPostcodes(map, bubble){
   var service = platform.getPlatformDataService();
 
-  style = new mapsjs.map.SpatialStyle();
+  style = new H.map.SpatialStyle();
   // create tile provider and layer that displays postcode boundaries
-  var boundariesProvider = new mapsjs.service.extension.platformData.TileProvider(service,
+  var boundariesProvider = new H.service.extension.platformData.TileProvider(service,
   {
     layerId: 'PSTLCB_GEN', level: 12
   }, {
-      resultType: mapsjs.service.extension.platformData.TileProvider.ResultType.POLYLINE,
+      resultType: H.service.extension.platformData.TileProvider.ResultType.POLYLINE,
       styleCallback: function(data) {return style}
   });
-  var boundaries = new mapsjs.map.layer.TileLayer(boundariesProvider);
+  var boundaries = new H.map.layer.TileLayer(boundariesProvider);
   map.addLayer(boundaries);
 
   // create tile provider and layer that displays postcode centroids
-  var centroidsProvider = new mapsjs.service.extension.platformData.TileProvider(service,
+  var centroidsProvider = new H.service.extension.platformData.TileProvider(service,
   {
     layerId: 'PSTLCB_MP', level: 12
   }, {
-      resultType: mapsjs.service.extension.platformData.TileProvider.ResultType.MARKER
+      resultType: H.service.extension.platformData.TileProvider.ResultType.MARKER
   });
-  var centroids = new mapsjs.map.layer.MarkerTileLayer(centroidsProvider);
+  var centroids = new H.map.layer.MarkerTileLayer(centroidsProvider);
   map.addLayer(centroids);
 
   // add event listener that shows infobubble with basic information
   // about the postcode
   centroidsProvider.addEventListener('tap', function(ev) {
     var marker = ev.target;
-    bubble.setPosition(marker.getPosition());
+    bubble.setPosition(marker.getGeometry());
     var str = '<nobr>Postal code: ' + marker.getData().getCell('POSTAL_CODE') + '</nobr><br>' +
               'Country code: ' + marker.getData().getCell('ISO_COUNTRY_CODE') + '<br>'
     bubble.setContent(str);
@@ -51,9 +51,7 @@ function showPostcodes(map, bubble){
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: window.app_id,
-  app_code: window.app_code,
-  useHTTPS: true
+  apikey: apikey
 });
 var pixelRatio = window.devicePixelRatio || 1;
 var defaultLayers = platform.createDefaultLayers({
@@ -63,7 +61,7 @@ var defaultLayers = platform.createDefaultLayers({
 
 //Step 2: initialize a map  - not specificing a location will give a whole world view.
 var map = new H.Map(document.getElementById('map'),
-  defaultLayers.normal.map, {pixelRatio: pixelRatio});
+  defaultLayers.vector.normal.map, {pixelRatio: pixelRatio});
 // add a resize listener to make sure that the map occupies the whole container
 window.addEventListener('resize', () => map.getViewPort().resize());
 

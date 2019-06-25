@@ -68,8 +68,7 @@ var mapContainer = document.getElementById('map'),
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: window.app_id,
-  app_code: window.app_code,
+  apikey: window.apikey,
   useHTTPS: true
 });
 var pixelRatio = window.devicePixelRatio || 1;
@@ -80,7 +79,7 @@ var defaultLayers = platform.createDefaultLayers({
 
 //Step 2: initialize a map - this map is centered over Berlin
 var map = new H.Map(mapContainer,
-  defaultLayers.normal.map,{
+  defaultLayers.vector.normal.map,{
   center: {lat:52.5160, lng:13.3779},
   zoom: 13,
   pixelRatio: pixelRatio
@@ -142,7 +141,9 @@ function addRouteShapeToMap(route){
   // Add the polyline to the map
   map.addObject(polyline);
   // And zoom to its bounding rectangle
-  map.setViewBounds(polyline.getBounds(), true);
+  map.getViewModel().setLookAtData({
+    bounds: polyline.getBoundingBox()
+  });
 }
 
 

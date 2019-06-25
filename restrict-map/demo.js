@@ -43,9 +43,7 @@ function restrictMap(map){
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
-  app_id: window.app_id,
-  app_code: window.app_code,
-  useHTTPS: true
+  apikey: apikey
 });
 var pixelRatio = window.devicePixelRatio || 1;
 var defaultLayers = platform.createDefaultLayers({
@@ -55,15 +53,13 @@ var defaultLayers = platform.createDefaultLayers({
 
 //Step 2: initialize a map - this map is centered over Alcatraz Island
 var map = new H.Map(document.getElementById('map'),
-  defaultLayers.normal.map,{
+  defaultLayers.vector.normal.map,{
   center: {lat:37.82667, lng:-122.423333},
   zoom: 16,
   pixelRatio: pixelRatio
 });
 // add a resize listener to make sure that the map occupies the whole container
 window.addEventListener('resize', () => map.getViewPort().resize());
-
-map.setBaseLayer(defaultLayers.satellite.map);
 
 //Step 3: make the map interactive
 // MapEvents enables the event system
