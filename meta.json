@@ -30,6 +30,12 @@
                             "published": true
                         },
                         {
+                            "uid": "interactive-basemap",
+                            "title": "Interactive base map", 
+                            "shortDescription": "Retrieve information associated with the map features",
+                            "published": true
+                        },
+                        {
                             "uid": "map-using-view-bounds",
                             "title": "Map using View Bounds", 
                             "shortDescription": "Display a map of a given area",
