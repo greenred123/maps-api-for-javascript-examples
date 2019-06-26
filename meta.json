@@ -24,6 +24,12 @@
                             "published": true
                         },
                         {
+                            "uid": "change-style-at-runtime",
+                            "title": "Change map style at runtime", 
+                            "shortDescription": "Change a style of the map feature when map is instantiated",
+                            "published": true
+                        },
+                        {
                             "uid": "map-using-view-bounds",
                             "title": "Map using View Bounds", 
                             "shortDescription": "Display a map of a given area",
@@ -75,7 +81,7 @@
                             "uid": "display-kml-on-map",
                             "title": "Display KML Data", 
                             "shortDescription": "Parse a KML file and display the data on a map.",
-                            "published": false
+                            "published": true
                         },  
                         {
                             "uid": "custom-tile-overlay",
