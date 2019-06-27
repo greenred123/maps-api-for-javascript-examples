@@ -46,7 +46,7 @@ var defaultLayers = platform.createDefaultLayers({
   ppi: pixelRatio === 1 ? undefined : 320
 });
 
-//Step 2: initialize a map - this map is centered over New Delhi
+//Step 2: initialize a map
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.vector.normal.map,{
   center: {lat: 60.1697, lng:24.8292},
