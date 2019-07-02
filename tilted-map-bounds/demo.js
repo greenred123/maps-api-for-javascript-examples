@@ -45,8 +45,9 @@ function displayBounds(firstMap, secondMap) {
  */
 
 // initialize communication with the platform
+// In your own code, replace variable window.apikey with your own apikey
 var platform = new H.service.Platform({
-  apikey: apikey
+  apikey: window.apikey
 });
 // create two sets of the default layers for each map instance
 var defaultLayers = platform.createDefaultLayers();

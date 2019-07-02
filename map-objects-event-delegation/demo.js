@@ -79,12 +79,12 @@ function testDelegation(map) {
   map.addObject(container);
 }
 
-
 /**
  * Boilerplate map initialization code starts below:
  */
 
 // Step 1: initialize communication with the platform
+// In your own code, replace variable window.apikey with your own apikey
 var platform = new H.service.Platform({
   apikey: window.apikey
 });

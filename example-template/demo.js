@@ -21,15 +21,13 @@ function capture(resultContainer, map, ui) {
   }, [ui], 50, 50, 500, 200);
 }
 
-
-
 /**
  * Boilerplate map initialization code starts below:
  */
 // Step 1: initialize communication with the platform
-// In your own code, replace variable apikey with your own apikey
+// In your own code, replace variable window.apikey with your own apikey
 var platform = new H.service.Platform({
-apikey: apikey,
+  apikey: window.apikey,
   useHTTPS: true,
   useCIT: true
 });
