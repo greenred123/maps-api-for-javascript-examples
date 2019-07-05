@@ -2,7 +2,8 @@
  name: Search for the Address of a Known Location
  description: Request address details for a given location and display it on the map
  resources:
-   - https://greenred123.github.io/maps-api-for-javascript-examples/test-credentials.js
+   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/test-credentials.js
+   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/reverse-geocode-an-address-from-location/img/arrows.png
  normalize_css: no
  dtd: html 5
  wrap: d
