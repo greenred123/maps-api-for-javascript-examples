@@ -2,8 +2,7 @@
  name: Marker on the Map
  description: Display a map highlighting points of interest
  resources:
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/test-credentials.js
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/markers-on-the-map/markers-on-the-map.png
+   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/master/test-credentials.js
  normalize_css: no
  dtd: html 5
  wrap: d

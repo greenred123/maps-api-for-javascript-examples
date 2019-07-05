@@ -2,7 +2,7 @@
  name: Context Menu
  description: Adding a context menu to map objects
  resources:
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/test-credentials.js
+   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/master/test-credentials.js
  normalize_css: no
  dtd: html 5
  wrap: d

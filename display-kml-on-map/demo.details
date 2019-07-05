@@ -2,8 +2,7 @@
  name: Display KML Data
  description: Parse a KML file and display the data on a map.
  resources:
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/test-credentials.js
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/display-kml-on-map/data/us-states.kml
+   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/master/test-credentials.js
  normalize_css: no
  dtd: html 5
  wrap: d

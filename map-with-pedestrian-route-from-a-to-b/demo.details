@@ -2,8 +2,8 @@
  name: Map with Pedestrian Route from A to B
  description: Request a walking route from A to B and display it on the map
  resources:
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/test-credentials.js
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/map-with-pedestrian-route-from-a-to-b/img/arrows.png
+   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/master/test-credentials.js
+   - map-with-pedestrian-route-from-a-to-b/img/arrows.png
  normalize_css: no
  dtd: html 5
  wrap: d

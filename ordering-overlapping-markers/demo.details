@@ -2,7 +2,7 @@
  name: Ordering Overlapping Markers
  description: Arrange the order in which a series of map objects are displayed
  resources:
-   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/test-credentials.js
+   - https://raw.githubusercontent.com/greenred123/maps-api-for-javascript-examples/master/test-credentials.js
  normalize_css: no
  dtd: html 5
  wrap: d
